@@ -26,7 +26,26 @@ const CarController = {
 
     async delete(req: Request, res: Response): Promise<Response> {        
         const { id } = req.params
-        let cars = await CarModel.findByIdAndDelete(id)
+
+        const {
+            marca,
+            modelo,
+            versao,
+            ano,
+            quilometragem,
+            tipoCambio,
+            precoVenda
+        } = req.body
+
+        let cars = await CarModel.findByIdAndDelete(id, {
+            marca: marca,
+            modelo: modelo,
+            versao: versao,
+            ano: ano,
+            quilometragem: quilometragem,
+            tipoCambio: tipoCambio,
+            precoVenda: precoVenda
+        })
         return res.json(cars)
     },
 

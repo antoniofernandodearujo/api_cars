@@ -3,7 +3,15 @@ import CarModel from "../model/CarModel";
 
 const Validation = async (req: Request, res: Response, next: NextFunction) => {
 
-    const { marca, modelo } = req.body
+    const { 
+        marca, 
+        modelo, 
+        versao, 
+        ano, 
+        quilometragem, 
+        tipoCambio, 
+        precoVenda 
+    } = req.body
 
     if(!marca) {
         return res.status(400).json({error: 'Você deve escever o nome da marca'})
