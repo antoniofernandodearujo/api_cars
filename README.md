@@ -20,7 +20,7 @@ um CRUD, utilizando um banco de dados não relacional, e também testando as rot
 
 ```bash
 # clonar o repositório
-git clone https://github.com/antoniofernandodearujo/backend_ControledeEstoque
+git clone https://github.com/antoniofernandodearujo/api_cars.git
 ```
 
 ```bash
